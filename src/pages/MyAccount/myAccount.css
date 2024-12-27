@@ -1,0 +1,136 @@
+/* General Container */
+.myAccount-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Header Section */
+.myAccount-header {
+  background-color: #d9e3ed;
+  padding-left: 5%;
+  padding-top: 3%;
+  text-align: start;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  position: relative; /* For dropdown positioning */
+}
+
+.header-title {
+  font-size: 150%;
+  font-weight: lighter;
+  color: #1e255e;
+}
+
+.header-subtitle {
+  padding-top: 2%;
+  font-size: 1.4rem;
+  color: #1e255e;
+  font-weight: bold;
+}
+
+.header-info {
+  padding-top: 2%;
+  font-size: 0.9rem;
+  color: #1e255e;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  background-color: #ccc;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  padding: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 10;
+}
+
+.course-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-item {
+  font-size: 1rem;
+  color: #333;
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.course-item:last-child {
+  border-bottom: none;
+}
+
+.no-courses-message {
+  font-size: 1rem;
+  color: #888;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+  padding: 25px;
+  padding-top: 10%;
+  background-color: #d9e3ed;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  font-size: 1rem;
+  color: #333;
+  padding: 10px 15px;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-item:hover {
+  background-color: #1e255e;
+  color: #ffffff;
+}
+
+/* Content Area */
+.content-area {
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.content-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.content-info {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.link {
+  color: #45a049;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #2f7d37;
+}
