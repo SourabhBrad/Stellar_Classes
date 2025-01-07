@@ -214,9 +214,18 @@
 
 
 
-// import React from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import { ChevronDown, Facebook, Instagram, Youtube, Linkedin } from 'lucide-react';
+
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { ChevronDown, Facebook, Instagram, Youtube, Linkedin } from 'lucide-react';
+import Footer from './Footer/Footer';
+import Testimonial from './Testimonials/Testimonial';
+import LearningJourney from './Information/LearningJourney';
+import ExploreCourses from './ExploreCourses/ExploreCourses';
+import Counter from './StellarDescription/Counter';
+import Button from '../components/Button';
+import HeroSection from './HeroSection/HeroSection';
+
 
 // const Button = ({ children, className, variant = "default", onClick }) => (
 //   <button
@@ -231,176 +240,68 @@
 //   </button>
 // );
 
-// export default function StellarClasses() {
-//   const navigate = useNavigate();
-
-//   const handleSignUpClick = () => {
-//     navigate('/register');
-//   };
-
-//   const handleLoginClick = () => {
-//     navigate('/login');
-//   };
-
+// const Courses = ({ courses, onSelectCourse }) => {
 //   return (
-//     <div className="bg-white font-sans">
-//       <header className="flex items-center justify-between p-4 bg-white">
-//         <div className="flex items-center space-x-2">
-//           <img src="/placeholder.svg" alt="Stellar Classes Logo" className="w-10 h-10" />
-//           <span className="text-[#1e3a8a] text-xl font-bold">Stellar Classes</span>
-//         </div>
-//         <nav className="hidden md:flex items-center space-x-6">
-//           <a href="#" className="text-[#60a5fa] hover:text-[#1e3a8a]">Home</a>
-//           <a href="#" className="text-[#1e3a8a] hover:text-[#60a5fa] flex items-center">
-//             Courses <ChevronDown className="ml-1 h-4 w-4" />
-//           </a>
-//           {/* <a href="#" className="text-[#1e3a8a] hover:text-[#60a5fa]">Login</a> */}
-//           <Button onClick={handleLoginClick}>Login</Button>
-//           <Button onClick={handleSignUpClick}>SIGN UP</Button>
-//         </nav>
-//       </header>
-//       <main>
-//         <section className="flex flex-col md:flex-row items-center justify-between p-8 md:p-16 bg-[#f0f9ff]">
-//           <div className="md:w-1/2 space-y-6">
-//             <h1 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] leading-tight">
-//               The Trusted Name for In-Home Tutoring
-//             </h1>
-//             <p className="text-[#475569] text-lg">
-//               Join us at Stellar Classes and embark on an educational journey. Let's unlock your true potential together and pave the way for a brighter future.
-//             </p>
-//             <div className="space-x-4">
-//               <Button>EXPLORE COURSES</Button>
-//               <Button variant="outline">KNOW MORE</Button>
-//             </div>
-//           </div>
-//           <div className="md:w-1/2 mt-8 md:mt-0">
-//             <img src="/placeholder.svg" alt="Students studying" className="rounded-lg w-full" />
-//           </div>
-//         </section>
-//         {/* Other sections remain unchanged */}
-//       </main>
-//       <footer className="bg-[#1e3a8a] text-white">
-//         <div className="container mx-auto px-4 py-8">
-//           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-//             <div className="flex items-center mb-4 md:mb-0">
-//               <img src="/placeholder.svg" alt="Stellar Classes Logo" className="w-10 h-10 mr-2" />
-//               <span className="text-xl font-bold">Stellar Classes</span>
-//             </div>
-//             <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
-//               <nav className="flex space-x-4">
-//                 <a href="#" className="hover:text-[#60a5fa]">Home</a>
-//                 <a href="#" className="hover:text-[#60a5fa]">About</a>
-//                 <a href="#" className="hover:text-[#60a5fa]">Courses</a>
-//                 <a href="#" className="hover:text-[#60a5fa]">Contact</a>
-//               </nav>
-//               <div className="flex space-x-4">
-//                 <a href="#" className="hover:text-[#60a5fa]"><Facebook size={24} /></a>
-//                 <a href="#" className="hover:text-[#60a5fa]"><Instagram size={24} /></a>
-//                 <a href="#" className="hover:text-[#60a5fa]"><Youtube size={24} /></a>
-//                 <a href="#" className="hover:text-[#60a5fa]"><Linkedin size={24} /></a>
-//               </div>
-//             </div>
-//           </div>
-//           <div className="border-t border-[#60a5fa] pt-4 flex flex-col md:flex-row justify-between items-center">
-//             <p>&copy; 2024 All rights Reserved | Stellar Classes</p>
-//             <div className="flex space-x-4 mt-4 md:mt-0">
-//               <a href="#" className="text-sm hover:text-[#60a5fa]">Privacy Policy</a>
-//               <a href="#" className="text-sm hover:text-[#60a5fa]">Terms of Use</a>
-//               <a href="#" className="text-sm hover:text-[#60a5fa]">Refund Policy</a>
-//             </div>
-//           </div>
-//         </div>
-//       </footer>
+//     <div className="absolute bg-white border border-gray-200 shadow-lg rounded-md mt-2">
+//       <ul className="py-2">
+//         {courses.map((course, index) => (
+//           <li
+//             key={index}
+//             onClick={() => onSelectCourse(course)}
+//             className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+//           >
+//             {course}
+//           </li>
+//         ))}
+//       </ul>
 //     </div>
 //   );
-// }
-
-
-
-
-
-
-
-
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { ChevronDown, Facebook, Instagram, Youtube, Linkedin } from 'lucide-react';
-
-const Button = ({ children, className, variant = "default", onClick }) => (
-  <button
-    onClick={onClick}
-    className={`px-4 py-2 rounded ${
-      variant === "outline"
-        ? "border border-[#1e3a8a] text-[#1e3a8a] hover:bg-[#1e3a8a] hover:text-white"
-        : "bg-[#1e3a8a] text-white hover:bg-[#1e40af]"
-    } ${className}`}
-  >
-    {children}
-  </button>
-);
-
-const Courses = ({ courses, onSelectCourse }) => {
-  return (
-    <div className="absolute bg-white border border-gray-200 shadow-lg rounded-md mt-2">
-      <ul className="py-2">
-        {courses.map((course, index) => (
-          <li
-            key={index}
-            onClick={() => onSelectCourse(course)}
-            className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-          >
-            {course}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+// };
 
 export default function StellarClasses() {
-  const navigate = useNavigate();
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+ // const navigate = useNavigate();
+ // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const coursesList = [
-    "Physics - Class IX",
-    "Chemistry - Class IX",
-    "Mathematics - Class IX",
-    "Biology - Class IX",
-    "Physics - Class X",
-    "Chemistry - Class X",
-  ];
+  // const coursesList = [
+  //   "Physics - Class IX",
+  //   "Chemistry - Class IX",
+  //   "Mathematics - Class IX",
+  //   "Biology - Class IX",
+  //   "Physics - Class X",
+  //   "Chemistry - Class X",
+  // ];
 
-  const handleCourseSelect = (course) => {
-    console.log(`Selected Course: ${course}`);
-    setIsDropdownOpen(false); // Close dropdown after selection
-  };
+  // const handleCourseSelect = (course) => {
+  //   console.log(`Selected Course: ${course}`);
+  //   setIsDropdownOpen(false); // Close dropdown after selection
+  // };
 
-  const handleSignUpClick = () => {
-    navigate('/register');
-  };
+  // const handleSignUpClick = () => {
+  //   navigate('/register');
+  // };
 
-  const handleLoginClick = () => {
-    navigate('/login');
-  };
+  // const handleLoginClick = () => {
+  //   navigate('/login');
+  // };
 
-  const handleTeacherModeClick = () => {
-    navigate("/teacher-mode"); // Redirect to Teacher Mode page
-  };
+  // const handleTeacherModeClick = () => {
+  //   navigate("/teacher-mode"); // Redirect to Teacher Mode page
+  // };
 
-  const handleMyAccountClick = () => {
-    navigate("/my-account"); // Redirect to Teacher Mode page
-  };
+  // const handleMyAccountClick = () => {
+  //   navigate("/my-account"); // Redirect to Teacher Mode page
+  // };
 
   return (
     <div className="bg-white font-sans">
       <header className="flex items-center justify-between p-4 bg-white relative">
         <div className="flex items-center space-x-2">
-          <img src="/placeholder.svg" alt="Stellar Classes Logo" className="w-10 h-10" />
-          <span className="text-[#1e3a8a] text-xl font-bold">Stellar Classes</span>
+          {/* <img src="/placeholder.svg" alt="Stellar Classes Logo" className="w-10 h-10" />
+          <span className="text-[#1e3a8a] text-xl font-bold">Stellar Classes</span> */}
         </div>
         <nav className="hidden md:flex items-center space-x-6">
-          <a href="#" className="text-[#60a5fa] hover:text-[#1e3a8a]">Home</a>
-          <div className="relative">
+          {/* <a href="#" className="text-[#60a5fa] hover:text-[#1e3a8a]">Home</a> */}
+          {/* <div className="relative">
             <a
               href="#"
               className="text-[#1e3a8a] hover:text-[#60a5fa] flex items-center"
@@ -414,19 +315,19 @@ export default function StellarClasses() {
             {isDropdownOpen && (
               <Courses courses={coursesList} onSelectCourse={handleCourseSelect} />
             )}
-          </div>
-          <Button onClick={handleLoginClick}>Login</Button>
+          </div> */}
+          {/* <Button onClick={handleLoginClick}>Login</Button>
           <Button onClick={handleSignUpClick}>SIGN UP</Button>
           <Button variant="outlined" color="inherit" onClick={handleTeacherModeClick}>
           Teacher Mode
         </Button>
         <Button variant="outlined" color="inherit" onClick={ handleMyAccountClick}>
           My Account
-        </Button>
+        </Button> */}
         </nav>
       </header>
       <main>
-      <section className="flex flex-col md:flex-row items-center justify-between p-8 md:p-16 bg-[#f0f9ff]">
+      {/* <section className="flex flex-col md:flex-row items-center justify-between p-8 md:p-16 bg-[#f0f9ff]">
           <div className="md:w-1/2 space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] leading-tight">
               The Trusted Name for In-Home Tutoring
@@ -434,7 +335,7 @@ export default function StellarClasses() {
             <p className="text-[#475569] text-lg">
               Join us at Stellar Classes and embark on an educational journey. Let's unlock your true potential together and pave the way for a brighter future.
             </p>
-            <div className="space-x-4">
+            <div className="space-x-4"> 
               <Button>EXPLORE COURSES</Button>
               <Button variant="outline">KNOW MORE</Button>
             </div>
@@ -442,8 +343,13 @@ export default function StellarClasses() {
           <div className="md:w-1/2 mt-8 md:mt-0">
             <img src="/placeholder.svg" alt="Students studying" className="rounded-lg w-full" />
           </div>
-        </section>
-        <section className="bg-[#f0f9ff] py-12">
+        </section> */}
+
+
+        <HeroSection/>
+
+
+        {/* <section className="bg-[#f0f9ff] py-12">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {[
@@ -459,8 +365,12 @@ export default function StellarClasses() {
               ))}
             </div>
           </div>
-        </section>
-        <section className="p-8 md:p-16">
+        </section> */}
+
+        <Counter/>
+
+        
+        {/* <section className="p-8 md:p-16">
           <h2 className="text-3xl font-bold text-[#1e3a8a] mb-4">Popular Online Courses</h2>
           <p className="text-[#475569] mb-8">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu libero urna. Maecenas malesuada id urna id mattis.
@@ -504,8 +414,12 @@ export default function StellarClasses() {
               </div>
             ))}
           </div>
-        </section>
-        <section className="p-8 md:p-16 bg-[#f0f9ff]">
+        </section> */}
+
+        <ExploreCourses/>
+
+
+        {/* <section className="p-8 md:p-16 bg-[#f0f9ff]">
           <h2 className="text-3xl font-bold text-[#1e3a8a] mb-4 text-center">Testimonials</h2>
           <h3 className="text-4xl md:text-5xl font-bold text-[#1e3a8a] mb-8 text-center">Hear From Our Students</h3>
           <div className="max-w-4xl mx-auto">
@@ -527,8 +441,10 @@ export default function StellarClasses() {
             <div className="w-2 h-2 rounded-full bg-[#60a5fa]"></div>
             <div className="w-2 h-2 rounded-full bg-[#60a5fa]"></div>
           </div>
-        </section>
-        <section className="p-8 md:p-16">
+        </section> */}
+        <Testimonial/>
+
+        {/* <section className="p-8 md:p-16">
           <h2 className="text-3xl font-bold text-[#1e3a8a] mb-4">Launch Your Learning Journey</h2>
           <p className="text-[#475569] mb-8">
             A place where innovation meets imagination, transporting you to a realm where knowledge knows no bounds.
@@ -568,9 +484,11 @@ export default function StellarClasses() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
+        <LearningJourney/>
+
       </main>
-      <footer className="bg-[#1e3a8a] text-white">
+      {/* <footer className="bg-[#1e3a8a] text-white">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
             <div className="flex items-center mb-4 md:mb-0">
@@ -600,7 +518,8 @@ export default function StellarClasses() {
               <a href="#" className="text-sm hover:text-[#60a5fa]">Refund Policy</a>
             </div>
           </div>        </div>
-      </footer>
+      </footer> */}
+      <Footer/>
     </div>
   );
 }

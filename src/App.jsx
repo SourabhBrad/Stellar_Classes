@@ -110,6 +110,7 @@ function App() {
     
       <div className="App">
         {/* Ensure Navbar is inside Router */}
+        <Navbar/>
 
         <Routes>
           <Route

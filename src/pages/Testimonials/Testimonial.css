@@ -1,0 +1,78 @@
+/* Testimonial.css */
+
+.testimonial-section {
+  padding: 2rem 4rem;
+  background-color: #f0f9ff;
+  text-align: center;
+}
+
+.testimonial-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.testimonial-subtitle {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+}
+
+.testimonial-container {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.testimonial-quote {
+  color: #475569;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.profile-name {
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.profile-role {
+  color: #475569;
+}
+
+.testimonial-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.pagination-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #60a5fa;
+  border-radius: 50%;
+  margin: 0 0.25rem;
+}
+
+.pagination-dot.active {
+  background-color: #1e3a8a;
+}
