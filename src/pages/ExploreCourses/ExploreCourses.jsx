@@ -1,66 +1,50 @@
-import React from "react";
+
+import React, { useState } from "react";
 import "./ExploreCourses.css";
+import ClassIXCourses from "./ClassComponents/ClassIXCourses";
+import ClassXCourses from "./ClassComponents/ClassXCourses";
+import ClassXICourses from "./ClassComponents/ClassXICourses";
+import ClassXIICourses from "./ClassComponents/ClassXIICourses";
 
 const ExploreCourses = () => {
-  const courses = [
-    {
-      title: "Physics - Class IX (CBSE)",
-      description:
-        "This course has been prepared as per syllabus prescribed by CBSE for Class 9 Students",
-      price: "INR499",
-    },
-    {
-      title: "Chemistry - Class IX (CBSE)",
-      description:
-        "Comprehensive chemistry course aligned with CBSE syllabus for Class 9 Students",
-      price: "INR499",
-    },
-    {
-      title: "Mathematics - Class IX (CBSE)",
-      description:
-        "In-depth mathematics course following CBSE guidelines for Class 9 Students",
-      price: "INR499",
-    },
-  ];
+  const [activeClass, setActiveClass] = useState("Class IX");
 
   const classes = ["Class IX", "Class X", "Class XI", "Class XII"];
+
+  const renderCourses = () => {
+    switch (activeClass) {
+      case "Class IX":
+        return <ClassIXCourses />;
+      case "Class X":
+        return <ClassXCourses />;
+      case "Class XI":
+        return <ClassXICourses />;
+      case "Class XII":
+        return <ClassXIICourses />;
+      default:
+        return null;
+    }
+  };
 
   return (
     <section className="explore-courses">
       <h2 className="explore-title">Popular Online Courses</h2>
       <p className="explore-subtitle">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu libero
-        urna. Maecenas malesuada id urna id mattis.
+        Browse through courses for different classes and find the best one for
+        you!
       </p>
       <div className="class-buttons">
-        {classes.map((cls, index) => (
+        {classes.map((cls) => (
           <button
             key={cls}
-            className={`class-btn ${index === 0 ? "active" : ""}`}
+            onClick={() => setActiveClass(cls)}
+            className={`class-btn ${activeClass === cls ? "active" : ""}`}
           >
             {cls}
           </button>
         ))}
       </div>
-      <div className="course-grid">
-        {courses.map((course, index) => (
-          <div key={index} className="course-card">
-            <div className="course-image">
-              <img
-                src="/placeholder.svg"
-                alt={`${course.title} image`}
-                className="course-img"
-              />
-              <span className="course-price">{course.price}</span>
-            </div>
-            <div className="course-content">
-              <h3 className="course-title">{course.title}</h3>
-              <p className="course-description">{course.description}</p>
-              <button className="enroll-btn">Enroll Now</button>
-            </div>
-          </div>
-        ))}
-      </div>
+      <div className="course-grid">{renderCourses()}</div>
     </section>
   );
 };

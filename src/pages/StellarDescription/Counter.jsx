@@ -1,35 +1,3 @@
-// import React from "react";
-// import "./Counter.css";
-
-// const Counter = () => {
-//   const stats = [
-//     { number: "7+", description: "Online Courses" },
-//     { number: "8+", description: "Lessons in Courses" },
-//     { number: "12+", description: "Topics in Lessons" },
-//     { number: "100+", description: "Student's Enroll" },
-//   ];
-
-//   return (
-//     <section className="counter-section">
-//       <div className="counter-container">
-//         <div className="counter-grid">
-//           {stats.map((stat, index) => (
-//             <div key={index} className="counter-card">
-//               <div className="counter-number">{stat.number}</div>
-//               <div className="counter-description">{stat.description}</div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Counter;
-
-
-
-
 
 
 import React, { useState } from "react";

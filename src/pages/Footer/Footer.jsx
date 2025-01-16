@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Instagram, Youtube, Linkedin } from "react-feather"; // Ensure react-feather is installed or replace icons if not using this library.
+import { Facebook, Instagram, Youtube, Linkedin } from "react-feather"; 
 import "./Footer.css";
 import pic3 from "./stellar-classes-logo-white.png"
 

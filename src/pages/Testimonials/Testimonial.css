@@ -76,3 +76,16 @@
 .pagination-dot.active {
   background-color: #1e3a8a;
 }
+
+.testimonial-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.testimonial-card {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+

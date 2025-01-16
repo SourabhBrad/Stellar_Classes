@@ -1,34 +1,129 @@
 /* General Container */
 .teacher-mode-container {
   padding: 20px;
+  background-color: #f9faff;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Welcome Header */
+h4 {
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 10px;
 }
 
 /* Carousel Section */
 .carousel-section {
   margin: 30px 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.carousel .legend {
+  background-color: #1e3a8a !important;
+  color: white !important;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 /* Analytics Section */
 .analytics-section {
   margin: 40px 0;
+  text-align: center;
 }
 
 .analytics-card {
-  background-color: #f5f5f5;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  background: linear-gradient(145deg, #e0e7ff, #ffffff);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.analytics-card:hover {
+  transform: translateY(-5px);
+}
+
+.analytics-card h6 {
+  color: #475569;
+  font-weight: 600;
+}
+
+.analytics-card h4 {
+  margin-top: 10px;
 }
 
 /* Upload Study Materials Section */
 .upload-section {
   margin: 40px 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.upload-section h5 {
+  color: #1e3a8a;
+  margin-bottom: 20px;
 }
 
 .upload-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: 16px;
-  max-width: 600px;
-  margin: 0 auto;
 }
+
+.upload-form .MuiTextField-root {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.upload-form button {
+  background: #1e3a8a;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.upload-form button:hover {
+  background: #1644a3;
+}
+
+/* General Buttons */
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .analytics-card {
+    margin-bottom: 20px;
+  }
+
+  .upload-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-section {
+    padding: 15px;
+  }
+
+  .upload-section {
+    padding: 15px;
+  }
+}
+
